@@ -147,7 +147,7 @@ production:
     default:
       database: ods_production
       hosts:
-        - 'point db adress'
+        - http://35.163.173.123:27017/
       options:
         consistency: :strong
   options:
