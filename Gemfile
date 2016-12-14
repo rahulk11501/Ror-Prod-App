@@ -32,10 +32,10 @@ gem 'mongoid'
 
 gem "capistrano", "~> 3.7"
 gem 'capistrano3-puma'
-gem 'capistrano-rails', require: false
-gem 'capistrano-bundler', require: false
+gem 'capistrano-rails', '~> 1.1'
 gem 'capistrano-rvm'
-gem 'capistrano-passenger'
+gem 'capistrano3-nginx'
+gem 'capistrano-upload-config'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
