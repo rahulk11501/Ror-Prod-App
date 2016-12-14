@@ -1,7 +1,7 @@
 # config valid only for current version of Capistrano
 lock "3.7.0"
 
-set :application, "ods"
+set :application, "firstapp"
 set :repo_url, "https://github.com/rahulk11501/firstapp.git" 
 
 # Default branch is :master
@@ -32,7 +32,7 @@ set :repo_url, "https://github.com/rahulk11501/firstapp.git"
 # Default value for keep_releases is 5
 # set :keep_releases, 5
 
-# set :branch, :master
+set :branch, :master
 # set :deploy_to, '/home/ods'
 # set :pty, true
 set :linked_files, %w{config/mongoid.yml}
