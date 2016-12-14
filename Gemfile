@@ -30,6 +30,13 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'mongoid'
 
+gem "capistrano", "~> 3.7"
+gem 'capistrano3-puma'
+gem 'capistrano-rails', require: false
+gem 'capistrano-bundler', require: false
+gem 'capistrano-rvm'
+gem 'capistrano-passenger'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
