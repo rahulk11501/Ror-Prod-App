@@ -59,8 +59,8 @@
 #     auth_methods: %w(publickey password)
 #     # password: "please use keys"
 #   }
-server '35.163.173.123', user: 'root', roles: %w{app web db}
+server '35.163.173.123', user: 'ec2-user', roles: %w{app web db}
 
-role :app, %w{root@35.163.173.123}
-role :web, %w{root@35.163.173.123}
-role :db,  %w{root@35.163.173.123}
+role :app, %w{ec2-user@35.163.173.123}
+role :web, %w{ec2-user@35.163.173.123}
+role :db,  %w{ec2-user@35.163.173.123}
