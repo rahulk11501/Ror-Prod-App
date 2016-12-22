@@ -3,6 +3,8 @@ lock "3.7.0"
 
 set :application, "firstapp"
 set :repo_url, "https://github.com/rahulk11501/firstapp.git" 
+# set :ssh_options, { :forward_agent => true }
+set :ssh_options, { user: 'deploy', keys: %w(/home/rahul/pem/firstapp-2.pem), forward_agent: true }
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
