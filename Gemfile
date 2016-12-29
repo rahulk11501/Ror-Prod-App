@@ -30,6 +30,12 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'mongoid'
 
+gem "bson"
+
+gem "font-awesome-rails"
+
+gem 'bootstrap', '~> 4.0.0.alpha3'
+
 gem "capistrano", "~> 3.7"
 gem 'capistrano3-puma'
 gem 'capistrano-rails', '~> 1.1'

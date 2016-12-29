@@ -37,7 +37,7 @@ set :ssh_options, { user: 'deploy', keys: %w(/home/rahul/pem/firstapp-2.pem), fo
 set :branch, :master
 # set :deploy_to, '/home/ods'
 # set :pty, true
-set :linked_files, %w{config/mongoid.yml}
+# set :linked_files, %w{config/mongoid.yml}
 set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system public/uploads}
 # set :keep_releases, 5
 # set :rvm_type, :user
