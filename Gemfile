@@ -30,16 +30,23 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'mongoid'
 
-gem "capistrano", "~> 3.7"
-gem 'capistrano3-puma'
-gem 'capistrano-rails', '~> 1.1'
-gem 'capistrano-rvm'
-gem 'capistrano3-nginx'
-gem 'capistrano-upload-config'
+gem "bson"
+
+gem "font-awesome-rails"
+
+gem 'bootstrap', '~> 4.0.0.alpha3'
+
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+  gem "capistrano", "~> 3.7"
+  gem 'capistrano3-puma'
+  gem 'capistrano-rails', '~> 1.1'
+  gem 'capistrano-rvm'
+  gem 'capistrano3-nginx'
+  gem 'capistrano-upload-config'
 end
 
 group :development do
