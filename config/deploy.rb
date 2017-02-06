@@ -4,7 +4,7 @@ lock "3.7.0"
 set :application, "firstapp"
 set :repo_url, "https://github.com/rahulk11501/firstapp.git" 
 # set :ssh_options, { :forward_agent => true }
-set :ssh_options, { user: 'ec2-user', keys: %w(/home/rahul/pem/firstapp-2.pem), forward_agent: true }
+# set :ssh_options, { user: 'ec2-user', keys: %w(/home/rahul/pem/firstapp-2.pem), forward_agent: true }
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
@@ -34,11 +34,12 @@ set :ssh_options, { user: 'ec2-user', keys: %w(/home/rahul/pem/firstapp-2.pem), 
 # Default value for keep_releases is 5
 # set :keep_releases, 5
 
-set :branch, :master
+# set :branch, :master
 # set :deploy_to, '/home/ods'
 # set :pty, true
-# set :linked_files, %w{config/mongoid.yml}
-set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system public/uploads}
+set :linked_files, fetch(:linked_files, []).push('config/database.yml', 'config/secrets.yml', 'config/puma.rb')
+set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads')
+ 
 # set :keep_releases, 5
 # set :rvm_type, :user
 # set :rvm_ruby_version, 'jruby-2.2.3' # Edit this if you are using MRI Ruby
